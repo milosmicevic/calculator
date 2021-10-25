@@ -85,6 +85,10 @@ body {
   background-color: #ff9500;
 }
 
+#container main .calculator-container .buttons-container .modulus {
+  background-color: #343a40;
+}
+
 #container main .calculator-container .buttons-container #equals-button {
   background-color: #2ec973;
 }
@@ -94,8 +98,8 @@ body {
   background-color: #9b9b9b;
   cursor: pointer;
 }
-#container main .calculator-container .buttons-container .button:nth-child(1),
-#container main .calculator-container .buttons-container .button:nth-child(16) {
+
+#container main .calculator-container .buttons-container .button:nth-child(17) {
   width: 48%;
 }
 
@@ -111,4 +115,5 @@ body {
   color: #4c5c68;
   margin-left: 0.3rem;
 }
+
 
