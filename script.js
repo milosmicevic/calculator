@@ -39,6 +39,11 @@ function divideOperation(num1, num2) {
   return roundDecimal(res);
 }
 
+function modulusOperation(num1, num2) {
+  let res = num1 % num2;
+  return roundDecimal(res);
+}
+
 function equalsOperation() {
   const inputedArray = previousInput.innerText.split(" ");
   const num1 = Number(inputedArray[0]);
@@ -66,6 +71,11 @@ function equalsOperation() {
       currentInput.innerText = divideOperation(num1, num2);
       break;
 
+    case "%":
+      previousInput.innerText = `${num1} ${operation} ${num2} =`;
+      currentInput.innerText = modulusOperation(num1, num2);
+      break;
+
     default:
       break;
   }
@@ -76,7 +86,7 @@ digitButtons.forEach((digit) => {
     if (currentInput.innerText === "0" && e.target.innerText !== ".") {
       currentInput.innerText = "";
     } else if (
-      currentInput.innerText.length === 12 ||
+      currentInput.innerText.length === 9 ||
       (currentInput.innerText.includes(".") && e.target.innerText === ".")
     ) {
       return;
